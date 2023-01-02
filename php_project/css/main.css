@@ -1,0 +1,258 @@
+.error {
+  border: red 1px solid;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  float: left;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  background-color: teal;
+  padding: 0.4em 1em 0.4em 1em;
+  color: white;
+}
+nav img {
+  height: 2.5em;
+  width: 2.5em;
+  border: 1px solid;
+  border-radius: 1.25em;
+  padding: 0.1em;
+  background-color: inherit;
+}
+nav .logo_with_name {
+  display: flex;
+  float: left;
+  align-items: center;
+  gap: 0.6em;
+  background-color: inherit;
+  cursor: pointer;
+}
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  float: left;
+  gap: 1em;
+}
+nav ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+nav ul a:hover {
+  transform: scale(1.1);
+}
+
+.form_body {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(237, 237, 237);
+}
+.form_body label {
+  color: rgb(1, 1, 1);
+  font-weight: bold;
+  font-size: 16px;
+}
+.form_body input {
+  margin-bottom: 2em;
+  padding: 0.6em;
+  border-radius: 3px;
+  border: 1px rgb(162, 152, 152) solid;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.3s;
+  transition-property: all;
+  width: 120%;
+}
+.form_body input[type=submit] {
+  width: 120%;
+  cursor: pointer;
+  padding: 0.6em;
+  border: 0;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.form_body input[type=text]:focus, .form_body textarea:focus {
+  outline: 0;
+  border: solid rgb(11, 247, 207) 1px;
+  transform: scale(1.1);
+}
+.form_body input[type=submit]:hover {
+  transform: scale(1.1) translateX(5px);
+  align-self: center;
+  background-color: teal;
+}
+.form_body textarea {
+  padding: 0.3em;
+  border-radius: 3px;
+  border: 1px rgb(162, 152, 152) solid;
+  width: 120%;
+  margin-bottom: 1em;
+}
+.form_body .error {
+  border: red 2px solid;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding-bottom: auto;
+}
+
+body {
+  background-color: rgb(237, 237, 237);
+}
+
+/*-------------------------------------About.PHP Starts here---------------------*/
+article {
+  padding-left: 1em;
+  padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+  gap: 1em;
+}
+article .message_body {
+  display: none;
+}
+article .content {
+  box-sizing: border-box;
+  border: gray 1px solid;
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 15px;
+  box-shadow: gray 0px 0px 10px 3px;
+  transition: all 0.3s;
+}
+article .content:hover {
+  box-sizing: border-box;
+  transform: scale(1.04);
+}
+article h3 {
+  align-self: flex-start;
+}
+article p {
+  text-align: justify;
+  width: 100%;
+}
+article span {
+  align-self: flex-start;
+}
+article span button {
+  background-color: rgb(10, 90, 237);
+  color: white;
+  padding: 0.5em;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 0.5em;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+article span button:hover {
+  background-color: teal;
+  transform: scale(1.1);
+  box-shadow: rgb(127, 202, 248) 0px 0px 10px 2px;
+}
+
+/*-------------------------------------About.PHP ends here---------------------*/
+@media screen and (min-width: 680px) {
+  article {
+    display: grid;
+    grid-template-columns: 40% auto;
+    border: solid;
+    padding: 0;
+    gap: 0;
+    margin: 0;
+  }
+  article .message_body {
+    display: inline;
+    background: linear-gradient(60deg, blue, purple, magenta);
+  }
+  article .message_body img {
+    width: 90%;
+  }
+  article .form_body {
+    width: 100%;
+    border: solid;
+    padding: 0;
+  }
+  article .form_body input {
+    width: 200%;
+  }
+  article .form_body input[type=button] {
+    width: 200%;
+  }
+  article .form_body textarea {
+    width: 200%;
+  }
+}
+/*-----------------------Home.php(feedback display) css starts here----------------*/
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding-top: 2em;
+  margin: 0;
+}
+.feedback .title {
+  margin-bottom: 0.3em;
+  font-size: 1.4em;
+}
+.feedback .fb_card {
+  border: gray 1px solid;
+  margin-bottom: 1.5em;
+  padding: 0em 2em 2.2em 2em;
+  border-radius: 0.5em;
+  background-color: white;
+  box-shadow: rgb(167, 165, 165) 0 0 15px 1px;
+  width: 70%;
+}
+.feedback .fb_card .card_body {
+  background-color: rgb(19, 125, 125);
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  color: white;
+}
+.feedback .fb_card .card_name {
+  display: flex;
+  justify-content: center;
+  color: rgb(32, 28, 28);
+}
+.feedback .fb_card .date {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgb(163, 11, 233);
+  z-index: 2;
+  list-style: none;
+  margin-left: -2em;
+  height: 1em;
+  border-radius: 0.5em 0 0 0;
+  padding: 0.3em;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+/*-----------------------Home.php(feedback display) css ends here----------------*//*# sourceMappingURL=main.css.map */
